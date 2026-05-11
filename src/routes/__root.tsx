@@ -9,6 +9,8 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { SiteNav } from "../components/site/SiteNav";
+import { SiteFooter } from "../components/site/SiteFooter";
 
 function NotFoundComponent() {
   return (
@@ -72,14 +74,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Hemlock Valley Trail Society" },
+      {
+        name: "description",
+        content:
+          "Building, maintaining, and advocating for the trail networks of Hemlock Mountain, BC.",
+      },
+      { name: "author", content: "Hemlock Valley Trail Society" },
+      { property: "og:title", content: "Hemlock Valley Trail Society" },
+      {
+        property: "og:description",
+        content:
+          "Building, maintaining, and advocating for the trail networks of Hemlock Mountain, BC.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
@@ -113,7 +122,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
+        <SiteNav />
+        <Outlet />
+        <SiteFooter />
+      </div>
     </QueryClientProvider>
   );
 }
