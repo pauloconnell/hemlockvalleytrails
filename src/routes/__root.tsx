@@ -9,8 +9,6 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import { SiteNav } from "../components/site/SiteNav";
-import { SiteFooter } from "../components/site/SiteFooter";
 
 function NotFoundComponent() {
   return (
@@ -74,21 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hemlock Valley Trail Society" },
-      {
-        name: "description",
-        content:
-          "Building, maintaining, and advocating for the trail networks of Hemlock Mountain, BC.",
-      },
-      { name: "author", content: "Hemlock Valley Trail Society" },
-      { property: "og:title", content: "Hemlock Valley Trail Society" },
-      {
-        property: "og:description",
-        content:
-          "Building, maintaining, and advocating for the trail networks of Hemlock Mountain, BC.",
-      },
+      { title: "HemlockValleyTrails" },
+      { name: "description", content: "Updating from wordpress to Full Stack React and Next.js" },
+      { name: "author", content: "Lovable" },
+      { property: "og:title", content: "HemlockValleyTrails" },
+      { property: "og:description", content: "Updating from wordpress to Full Stack React and Next.js" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "HemlockValleyTrails" },
+      { name: "twitter:description", content: "Updating from wordpress to Full Stack React and Next.js" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8be82dba-6b09-456d-b604-70679b73c307/id-preview-1c03b3b5--667cc36f-f191-4cb9-9c8a-07d291d47e5c.lovable.app-1778527445882.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8be82dba-6b09-456d-b604-70679b73c307/id-preview-1c03b3b5--667cc36f-f191-4cb9-9c8a-07d291d47e5c.lovable.app-1778527445882.png" },
     ],
     links: [
       {
@@ -122,11 +117,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
-        <SiteNav />
-        <Outlet />
-        <SiteFooter />
-      </div>
+      <Outlet />
     </QueryClientProvider>
   );
 }
