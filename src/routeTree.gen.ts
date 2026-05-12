@@ -9,11 +9,23 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VolunteersRouteImport } from './routes/volunteers'
+import { Route as SponsorsRouteImport } from './routes/sponsors'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MembershipRouteImport } from './routes/membership'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VolunteersRoute = VolunteersRouteImport.update({
+  id: '/volunteers',
+  path: '/volunteers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SponsorsRoute = SponsorsRouteImport.update({
+  id: '/sponsors',
+  path: '/sponsors',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
@@ -40,12 +52,16 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
+  '/sponsors': typeof SponsorsRoute
+  '/volunteers': typeof VolunteersRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/events': typeof EventsRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
+  '/sponsors': typeof SponsorsRoute
+  '/volunteers': typeof VolunteersRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +69,34 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
+  '/sponsors': typeof SponsorsRoute
+  '/volunteers': typeof VolunteersRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/events' | '/membership' | '/projects'
+  fullPaths:
+    | '/'
+    | '/events'
+    | '/membership'
+    | '/projects'
+    | '/sponsors'
+    | '/volunteers'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/events' | '/membership' | '/projects'
-  id: '__root__' | '/' | '/events' | '/membership' | '/projects'
+  to:
+    | '/'
+    | '/events'
+    | '/membership'
+    | '/projects'
+    | '/sponsors'
+    | '/volunteers'
+  id:
+    | '__root__'
+    | '/'
+    | '/events'
+    | '/membership'
+    | '/projects'
+    | '/sponsors'
+    | '/volunteers'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,10 +104,26 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   MembershipRoute: typeof MembershipRoute
   ProjectsRoute: typeof ProjectsRoute
+  SponsorsRoute: typeof SponsorsRoute
+  VolunteersRoute: typeof VolunteersRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/volunteers': {
+      id: '/volunteers'
+      path: '/volunteers'
+      fullPath: '/volunteers'
+      preLoaderRoute: typeof VolunteersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sponsors': {
+      id: '/sponsors'
+      path: '/sponsors'
+      fullPath: '/sponsors'
+      preLoaderRoute: typeof SponsorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
@@ -107,7 +160,19 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   MembershipRoute: MembershipRoute,
   ProjectsRoute: ProjectsRoute,
+  SponsorsRoute: SponsorsRoute,
+  VolunteersRoute: VolunteersRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
