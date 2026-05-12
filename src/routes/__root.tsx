@@ -9,6 +9,8 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { SiteNav } from "../components/site/SiteNav";
+import { SiteFooter } from "../components/site/SiteFooter";
 
 function NotFoundComponent() {
   return (
@@ -117,7 +119,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <SiteNav />
       <Outlet />
+      <SiteFooter />
     </QueryClientProvider>
   );
 }
