@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/hemlock-logo.jpg";
 
 const links = [
   { to: "/", label: "Home" },
