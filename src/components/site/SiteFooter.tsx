@@ -1,15 +1,25 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/hemlock-logo.jpg";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-foreground text-background mt-24">
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <div className="font-extrabold tracking-tighter text-2xl uppercase leading-none">
-            Hemlock Valley
-          </div>
-          <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-background/60 mt-2">
-            Trail Society &middot; BC Mountains
+          <div className="flex items-center gap-4">
+            <img
+              src={logo}
+              alt="Hemlock Valley Trail Society logo"
+              className="h-14 w-14 rounded-full object-cover ring-1 ring-background/20"
+            />
+            <div>
+              <div className="font-extrabold tracking-tighter text-2xl uppercase leading-none">
+                Hemlock Valley
+              </div>
+              <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-background/60 mt-2">
+                Trail Society &middot; BC Mountains
+              </div>
+            </div>
           </div>
           <p className="text-sm text-background/70 mt-6 max-w-xs leading-relaxed">
             Making the vast beauty of Hemlock Mountain accessible to everyone — through
