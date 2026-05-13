@@ -21,11 +21,18 @@ export function SiteNav() {
         <Link
           to="/"
           onClick={() => setOpen(false)}
-          className="font-extrabold tracking-tighter text-lg uppercase leading-none"
+          className="flex items-center gap-3"
         >
-          Hemlock Valley
-          <span className="block text-[10px] font-mono tracking-[0.2em] text-muted-foreground mt-0.5">
-            Trail Society
+          <img
+            src={logo}
+            alt="Hemlock Valley Trail Society logo"
+            className="h-11 w-11 rounded-full object-cover ring-1 ring-border"
+          />
+          <span className="font-extrabold tracking-tighter text-lg uppercase leading-none">
+            Hemlock Valley
+            <span className="block text-[10px] font-mono tracking-[0.2em] text-muted-foreground mt-0.5">
+              Trail Society
+            </span>
           </span>
         </Link>
 
