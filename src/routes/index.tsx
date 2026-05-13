@@ -64,11 +64,6 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10 -z-10" />
 
         <div className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl animate-reveal">
-          <img
-            src={logo}
-            alt="Hemlock Valley Trail Society logo"
-            className="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover ring-2 ring-background/40 shadow-2xl mb-6"
-          />
           <div className="font-mono text-[10px] uppercase tracking-[0.3em] mb-5 text-primary">
             Hemlock Mountain &middot; British Columbia
           </div>
@@ -79,7 +74,7 @@ function Home() {
             Hemlock Valley Trail Society was formed with a clear intention: to make the vast
             beauty of Hemlock Mountain and the surrounding community accessible to everyone.
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-wrap items-center gap-3">
             <Link
               to="/membership"
               className="bg-foreground text-background px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors"
@@ -92,6 +87,11 @@ function Home() {
             >
               Explore Projects
             </Link>
+            <img
+              src={logo}
+              alt="Hemlock Valley Trail Society logo"
+              className="ml-2 h-[clamp(3rem,8vw,6rem)] w-[clamp(3rem,8vw,6rem)] rounded-full object-cover ring-2 ring-background/40 shadow-2xl"
+            />
           </div>
         </div>
       </header>
