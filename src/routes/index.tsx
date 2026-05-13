@@ -3,6 +3,7 @@ import heroForest from "../assets/hero-forest.jpg";
 import trailConstruction from "../assets/trail-construction.jpg";
 import trailMaintenance from "../assets/trail-maintenance.jpg";
 import community from "../assets/community.jpg";
+import logo from "../assets/hemlock-logo.jpg";
 import { SectionLabel } from "../components/site/SectionLabel";
 
 export const Route = createFileRoute("/")({
