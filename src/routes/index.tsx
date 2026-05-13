@@ -3,6 +3,7 @@ import heroForest from "../assets/hero-forest.jpg";
 import trailConstruction from "../assets/trail-construction.jpg";
 import trailMaintenance from "../assets/trail-maintenance.jpg";
 import community from "../assets/community.jpg";
+import logo from "../assets/hemlock-logo.jpg";
 import { SectionLabel } from "../components/site/SectionLabel";
 
 export const Route = createFileRoute("/")({
@@ -63,6 +64,11 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10 -z-10" />
 
         <div className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl animate-reveal">
+          <img
+            src={logo}
+            alt="Hemlock Valley Trail Society logo"
+            className="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover ring-2 ring-background/40 shadow-2xl mb-6"
+          />
           <div className="font-mono text-[10px] uppercase tracking-[0.3em] mb-5 text-primary">
             Hemlock Mountain &middot; British Columbia
           </div>
