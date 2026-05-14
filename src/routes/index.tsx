@@ -78,7 +78,7 @@ function Home() {
             <div className="flex flex-col sm:flex-col md:flex-row md:flex-wrap gap-3">
               <Link
                 to="/membership"
-                className="bg-foreground text-background px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors text-center"
+                className="bg-primary text-primary-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary-deep transition-colors text-center"
               >
                 Become a Member
               </Link>
@@ -101,7 +101,7 @@ function Home() {
       </header>
 
       {/* Mission */}
-      <section className="border-y border-border bg-muted/40">
+      <section className="border-y border-border bg-primary-soft/60">
         <div className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <SectionLabel index="00">Our Mission</SectionLabel>
@@ -179,32 +179,32 @@ function Home() {
       </section>
 
       {/* Stats / CTA */}
-      <section className="border-t border-border">
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+      <section className="border-t border-border bg-primary text-primary-foreground">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
           <div className="p-10 md:p-12">
-            <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-5">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               01 / Memberships
             </div>
             <div className="text-2xl font-extrabold tracking-tight mb-2">Join the Society</div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-primary-foreground/85">
               Memberships fund tools, materials and the work of building lasting trails.
             </p>
           </div>
           <div className="p-10 md:p-12">
-            <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-5">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               02 / Volunteer
             </div>
             <div className="text-2xl font-extrabold tracking-tight mb-2">Lend a hand</div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-primary-foreground/85">
               Volunteers play a critical role in trail construction, maintenance, and cleanup.
             </p>
           </div>
           <div className="p-10 md:p-12">
-            <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-5">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               03 / Sponsor
             </div>
             <div className="text-2xl font-extrabold tracking-tight mb-2">Support the work</div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-primary-foreground/85">
               Sponsorships and community support drive positive changes on Hemlock.
             </p>
           </div>
@@ -212,7 +212,7 @@ function Home() {
       </section>
 
       {/* Events teaser */}
-      <section className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28">
+      <section className="bg-primary-soft/40 border-b border-border"><div className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28">
         <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
           <div>
             <SectionLabel>Events &amp; Updates</SectionLabel>
@@ -263,7 +263,7 @@ function Home() {
             </p>
           </article>
         </div>
-      </section>
+      </div></section>
     </main>
   );
 }
