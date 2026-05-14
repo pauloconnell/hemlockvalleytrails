@@ -53,7 +53,7 @@ function Home() {
   return (
     <main>
       {/* Hero */}
-      <header className="relative w-full h-[92vh] min-h-[560px] overflow-hidden flex flex-col justify-end">
+      <header className="relative w-full min-h-[560px] overflow-hidden flex flex-col justify-end pt-32 md:pt-48">
         <img
           src={heroForest}
           alt="Misty hemlock forest at dawn in the British Columbia mountains"
@@ -74,7 +74,7 @@ function Home() {
             Hemlock Valley Trail Society was formed with a clear intention: to make the vast
             beauty of Hemlock Mountain and the surrounding community accessible to everyone.
           </p>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 items-center max-w-2xl">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 items-center">
             <div className="flex flex-col sm:flex-col md:flex-row md:flex-wrap gap-3">
               <Link
                 to="/membership"
