@@ -14,6 +14,7 @@ import { Route as SponsorsRouteImport } from './routes/sponsors'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MembershipRouteImport } from './routes/membership'
 import { Route as EventsRouteImport } from './routes/events'
+import { Route as BrochureRouteImport } from './routes/brochure'
 import { Route as IndexRouteImport } from './routes/index'
 
 const VolunteersRoute = VolunteersRouteImport.update({
@@ -41,6 +42,11 @@ const EventsRoute = EventsRouteImport.update({
   path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrochureRoute = BrochureRouteImport.update({
+  id: '/brochure',
+  path: '/brochure',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -49,6 +55,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
@@ -76,6 +85,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/brochure'
     | '/events'
     | '/membership'
     | '/projects'
@@ -84,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/brochure'
     | '/events'
     | '/membership'
     | '/projects'
@@ -92,6 +103,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/brochure'
     | '/events'
     | '/membership'
     | '/projects'
@@ -101,6 +113,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BrochureRoute: typeof BrochureRoute
   EventsRoute: typeof EventsRoute
   MembershipRoute: typeof MembershipRoute
   ProjectsRoute: typeof ProjectsRoute
@@ -145,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EventsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brochure': {
+      id: '/brochure'
+      path: '/brochure'
+      fullPath: '/brochure'
+      preLoaderRoute: typeof BrochureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -157,6 +177,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BrochureRoute: BrochureRoute,
   EventsRoute: EventsRoute,
   MembershipRoute: MembershipRoute,
   ProjectsRoute: ProjectsRoute,
