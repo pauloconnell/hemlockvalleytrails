@@ -10,6 +10,7 @@ const links = [
   { to: "/volunteers", label: "Volunteer" },
   { to: "/sponsors", label: "Sponsors" },
   { to: "/membership", label: "Membership" },
+  { to: "/brochure", label: "Brochure" },
 ] as const;
 
 export function SiteNav() {
