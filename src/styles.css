@@ -50,6 +50,8 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-deep: var(--primary-deep);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -86,14 +88,16 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.42 0.10 40);              /* cedar bark */
-  --primary-foreground: oklch(0.98 0.01 90);
+  --primary: oklch(0.62 0.13 195);             /* hemlock turquoise */
+  --primary-foreground: oklch(0.99 0.01 90);
+  --primary-soft: oklch(0.94 0.04 195);        /* turquoise wash */
+  --primary-deep: oklch(0.42 0.09 200);        /* deep teal */
   --secondary: oklch(0.36 0.05 165);           /* deep pine */
   --secondary-foreground: oklch(0.98 0.01 90);
   --muted: oklch(0.92 0.01 90);
   --muted-foreground: oklch(0.45 0.02 250);
-  --accent: oklch(0.42 0.10 40);
-  --accent-foreground: oklch(0.98 0.01 90);
+  --accent: oklch(0.62 0.13 195);
+  --accent-foreground: oklch(0.99 0.01 90);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.22 0.02 250 / 12%);
