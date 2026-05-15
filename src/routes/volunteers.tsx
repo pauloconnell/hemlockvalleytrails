@@ -27,8 +27,14 @@ export const Route = createFileRoute("/volunteers")({
 function Volunteers() {
   return (
     <main>
-      <header className="border-b border-border bg-foreground text-background">
-        <div className="mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-20 md:pt-28 md:pb-28">
+      <header className="relative border-b border-border bg-foreground text-background overflow-hidden">
+        <img
+          src={gatheringAerial}
+          alt="Volunteers gathered together on Hemlock Mountain"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-foreground/20" />
+        <div className="relative mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-20 md:pt-28 md:pb-28">
           <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-4">
             Volunteer
           </div>
@@ -41,6 +47,20 @@ function Volunteers() {
           </p>
         </div>
       </header>
+
+      {/* Gathering imagery */}
+      <section className="mx-auto max-w-7xl px-6 md:px-16 pt-16 md:pt-24 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img
+          src={gathering2}
+          alt="Volunteers gathered around a campfire on the mountain"
+          className="w-full h-64 md:h-80 object-cover"
+        />
+        <img
+          src={gatheringTopdown}
+          alt="Top-down view of volunteers meeting on the trail"
+          className="w-full h-64 md:h-80 object-cover"
+        />
+      </section>
 
       <section className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28 grid md:grid-cols-12 gap-12">
         <div className="md:col-span-5">
