@@ -230,6 +230,49 @@ function Home() {
         </div>
       </section>
 
+      {/* Carousel */}
+      <section className="bg-background border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-16 py-16 md:py-24">
+          <div className="mb-10">
+            <SectionLabel>Gallery</SectionLabel>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter">
+              Scenes from the mountain
+            </h2>
+          </div>
+          <Carousel
+            opts={{ loop: true, align: "start" }}
+            plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
+            className="w-full"
+          >
+            <CarouselContent>
+              {[
+                { src: gatheringAerial, alt: "Volunteers gathered on the mountain" },
+                { src: mountainVista, alt: "Mountain vista at Hemlock" },
+                { src: valleyWinter, alt: "Hemlock Valley in winter" },
+                { src: gathering2, alt: "Volunteers around a campfire" },
+                { src: utvsTrail, alt: "UTVs on a trail" },
+                { src: gatheringTopdown, alt: "Top-down view of a gathering" },
+                { src: valleySpring, alt: "Hemlock Valley in spring" },
+                { src: logo, alt: "Hemlock Valley Trail Society logo" },
+              ].map((img) => (
+                <CarouselItem key={img.src} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="aspect-[4/3] overflow-hidden bg-muted">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
+        </div>
+      </section>
+
       {/* Events teaser */}
       <section className="bg-primary-soft/40 border-b border-border"><div className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28">
         <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
