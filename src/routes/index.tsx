@@ -1,10 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import Autoplay from "embla-carousel-autoplay";
 import heroForest from "../assets/hero-forest.jpg";
 import trailConstruction from "../assets/trail-construction.jpg";
 import trailMaintenance from "../assets/trail-maintenance.jpg";
 import community from "../assets/community.jpg";
 import logo from "../assets/hemlock-logo.jpg";
+import gatheringAerial from "../assets/gallery/gathering-aerial-1.jpeg";
+import gathering2 from "../assets/gallery/gathering-2.jpeg";
+import gatheringTopdown from "../assets/gallery/gathering-topdown.jpeg";
+import valleyWinter from "../assets/gallery/valley-winter.jpeg";
+import mountainVista from "../assets/gallery/mountain-vista.jpeg";
+import utvsTrail from "../assets/gallery/utvs-trail.jpeg";
+import valleySpring from "../assets/gallery/valley-spring.jpeg";
 import { SectionLabel } from "../components/site/SectionLabel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/ui/carousel";
 
 export const Route = createFileRoute("/")({
   component: Home,
