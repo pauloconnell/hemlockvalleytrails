@@ -52,8 +52,15 @@ const projects = [
 function Home() {
   return (
     <main>
+      {/* Location bar */}
+      <div className="bg-primary-deep text-primary-foreground">
+        <div className="px-6 md:px-16 py-3 font-mono text-[11px] md:text-xs uppercase tracking-[0.3em] text-center">
+          Hemlock Mountain &middot; British Columbia
+        </div>
+      </div>
+
       {/* Hero */}
-      <header className="relative w-full min-h-[560px] overflow-hidden flex flex-col justify-end pt-32 md:pt-48">
+      <header className="relative w-full min-h-[560px] overflow-hidden flex flex-col justify-end pt-24 md:pt-40">
         <img
           src={heroForest}
           alt="Misty hemlock forest at dawn in the British Columbia mountains"
@@ -64,9 +71,6 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10 -z-10" />
 
         <div className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl animate-reveal">
-          <div className="font-mono text-[10px] uppercase tracking-[0.3em] mb-5 text-primary">
-            Hemlock Mountain &middot; British Columbia
-          </div>
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-balance mb-8 text-foreground">
             Built by hands.<br />Fueled by community.
           </h1>
