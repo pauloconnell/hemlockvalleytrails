@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionLabel } from "../components/site/SectionLabel";
+import gatheringAerial from "../assets/gallery/gathering-aerial-1.jpeg";
+import gathering2 from "../assets/gallery/gathering-2.jpeg";
+import gatheringTopdown from "../assets/gallery/gathering-topdown.jpeg";
 
 export const Route = createFileRoute("/volunteers")({
   component: Volunteers,
