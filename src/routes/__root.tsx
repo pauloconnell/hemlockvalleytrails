@@ -122,6 +122,23 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 60,
+      disable: () =>
+        typeof window !== "undefined" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refreshHard();
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
