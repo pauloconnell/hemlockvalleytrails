@@ -206,7 +206,7 @@ function Home() {
       {/* Stats / CTA */}
       <section className="border-t border-border bg-primary text-primary-foreground">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
-          <div className="p-10 md:p-12">
+          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="0">
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               01 / Memberships
             </div>
@@ -215,7 +215,7 @@ function Home() {
               Memberships fund tools, materials and the work of building lasting trails.
             </p>
           </div>
-          <div className="p-10 md:p-12">
+          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="150">
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               02 / Volunteer
             </div>
@@ -224,7 +224,7 @@ function Home() {
               Volunteers play a critical role in trail construction, maintenance, and cleanup.
             </p>
           </div>
-          <div className="p-10 md:p-12">
+          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="300">
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               03 / Sponsor
             </div>
