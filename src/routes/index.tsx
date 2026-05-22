@@ -122,13 +122,17 @@ function Home() {
       {/* Mission */}
       <section className="border-y border-border bg-primary-soft/60">
         <div className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28 grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-4">
+          <div className="md:col-span-4" data-aos="fade-right">
             <SectionLabel index="00">Our Mission</SectionLabel>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-[0.95]">
               Hemlock Valley Trail Society
             </h2>
           </div>
-          <div className="md:col-span-8 space-y-6 text-lg leading-relaxed text-foreground/80">
+          <div
+            className="md:col-span-8 space-y-6 text-lg leading-relaxed text-foreground/80"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
             <p>
               was formed with a clear intention: to make the vast beauty of Hemlock Mountain and
               the surrounding community accessible to everyone. The goal is to create and maintain
