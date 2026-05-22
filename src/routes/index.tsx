@@ -171,6 +171,8 @@ function Home() {
               className={`grid md:grid-cols-12 gap-8 md:gap-12 items-center ${
                 i % 2 === 1 ? "md:[&>figure]:order-2" : ""
               }`}
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
             >
               <figure className="md:col-span-7 relative aspect-[4/3] overflow-hidden bg-muted">
                 <img
