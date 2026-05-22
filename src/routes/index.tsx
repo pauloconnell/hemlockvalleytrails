@@ -239,7 +239,7 @@ function Home() {
       {/* Carousel */}
       <section className="bg-background border-b border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-16 py-16 md:py-24">
-          <div className="mb-10">
+          <div className="mb-10" data-aos="fade-up">
             <SectionLabel>Gallery</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter">
               Scenes from the mountain
