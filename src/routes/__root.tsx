@@ -1,12 +1,16 @@
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import appCss from "../styles.css?url";
 import { SiteNav } from "../components/site/SiteNav";
@@ -118,6 +122,23 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 60,
+      disable: () =>
+        typeof window !== "undefined" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refreshHard();
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>

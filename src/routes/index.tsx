@@ -122,13 +122,17 @@ function Home() {
       {/* Mission */}
       <section className="border-y border-border bg-primary-soft/60">
         <div className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28 grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-4">
+          <div className="md:col-span-4" data-aos="fade-right">
             <SectionLabel index="00">Our Mission</SectionLabel>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter leading-[0.95]">
               Hemlock Valley Trail Society
             </h2>
           </div>
-          <div className="md:col-span-8 space-y-6 text-lg leading-relaxed text-foreground/80">
+          <div
+            className="md:col-span-8 space-y-6 text-lg leading-relaxed text-foreground/80"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
             <p>
               was formed with a clear intention: to make the vast beauty of Hemlock Mountain and
               the surrounding community accessible to everyone. The goal is to create and maintain
@@ -167,6 +171,8 @@ function Home() {
               className={`grid md:grid-cols-12 gap-8 md:gap-12 items-center ${
                 i % 2 === 1 ? "md:[&>figure]:order-2" : ""
               }`}
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
             >
               <figure className="md:col-span-7 relative aspect-[4/3] overflow-hidden bg-muted">
                 <img
@@ -200,7 +206,7 @@ function Home() {
       {/* Stats / CTA */}
       <section className="border-t border-border bg-primary text-primary-foreground">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
-          <div className="p-10 md:p-12">
+          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="0">
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               01 / Memberships
             </div>
@@ -209,7 +215,7 @@ function Home() {
               Memberships fund tools, materials and the work of building lasting trails.
             </p>
           </div>
-          <div className="p-10 md:p-12">
+          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="150">
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               02 / Volunteer
             </div>
@@ -218,7 +224,7 @@ function Home() {
               Volunteers play a critical role in trail construction, maintenance, and cleanup.
             </p>
           </div>
-          <div className="p-10 md:p-12">
+          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="300">
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               03 / Sponsor
             </div>
@@ -233,7 +239,7 @@ function Home() {
       {/* Carousel */}
       <section className="bg-background border-b border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-16 py-16 md:py-24">
-          <div className="mb-10">
+          <div className="mb-10" data-aos="fade-up">
             <SectionLabel>Gallery</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter">
               Scenes from the mountain
@@ -291,7 +297,11 @@ function Home() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          <article className="border border-border p-8 hover:border-foreground transition-colors group">
+          <article
+            className="border border-border p-8 hover:border-foreground transition-colors group"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary mb-4">
               Holidays
             </div>
@@ -300,7 +310,11 @@ function Home() {
             </h3>
             <p className="text-sm text-muted-foreground">July 1st 2025</p>
           </article>
-          <article className="border border-border p-8 hover:border-foreground transition-colors group">
+          <article
+            className="border border-border p-8 hover:border-foreground transition-colors group"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary mb-4">
               HVTS Meeting
             </div>
@@ -313,7 +327,11 @@ function Home() {
               Saturday July 5th 11:30am.
             </p>
           </article>
-          <article className="border border-border p-8 hover:border-foreground transition-colors group">
+          <article
+            className="border border-border p-8 hover:border-foreground transition-colors group"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary mb-4">
               HVTS Event
             </div>
