@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import heroForest from "../assets/hero-forest.jpg";
 import trailConstruction from "../assets/trail-construction.jpg";
@@ -65,6 +66,31 @@ const projects = [
 ];
 
 function Home() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Parallax transforms — image drifts down slowly, content rises faster than scroll
+  const imageOffset = scrollY * 0.4;
+  const contentOffset = Math.max(0, 140 - scrollY * 0.5);
+  const contentOpacity = Math.max(0, 1 - scrollY / 600);
+
   return (
     <main>
       {/* Location bar */}
@@ -75,17 +101,28 @@ function Home() {
       </div>
 
       {/* Hero */}
-      <header className="relative w-full min-h-[560px] overflow-hidden flex flex-col justify-end pt-24 md:pt-40">
-        <img
-          src={heroForest}
-          alt="Misty hemlock forest at dawn in the British Columbia mountains"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 w-full h-full object-cover -z-10"
-        />
+      <header className="relative w-full min-h-[640px] md:min-h-[760px] overflow-hidden flex flex-col justify-end pt-24 md:pt-40">
+        <div
+          className="absolute inset-0 -z-10 will-change-transform"
+          style={{ transform: `translate3d(0, ${imageOffset}px, 0)` }}
+        >
+          <img
+            src={heroForest}
+            alt="Misty hemlock forest at dawn in the British Columbia mountains"
+            width={1920}
+            height={1080}
+            className="w-full h-[120%] object-cover"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10 -z-10" />
 
-        <div className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl animate-reveal">
+        <div
+          className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl animate-reveal will-change-transform"
+          style={{
+            transform: `translate3d(0, ${contentOffset}px, 0)`,
+            opacity: contentOpacity,
+          }}
+        >
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-balance mb-8 text-foreground">
             Built by hands.<br />Fueled by community.
           </h1>
@@ -118,6 +155,7 @@ function Home() {
           </div>
         </div>
       </header>
+
 
       {/* Mission */}
       <section className="border-y border-border bg-primary-soft/60">
