@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import heroForest from "../assets/hero-forest.jpg";
 import trailConstruction from "../assets/trail-construction.jpg";
