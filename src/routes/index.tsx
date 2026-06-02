@@ -87,9 +87,9 @@ function Home() {
   }, []);
 
   // Parallax transforms — image drifts down slowly, content rises faster than scroll
-  const imageOffset = scrollY * 0.2;
-  const contentOffset = Math.max(0, 280 - scrollY * 0.6);
-  const contentOpacity = Math.max(0, 1 - scrollY / 800);
+  const imageOffset = scrollY * 0.15;
+  const contentOffset = Math.max(0, 480 - scrollY * 1.0);
+  const contentOpacity = Math.max(0, 1 - scrollY / 900);
 
   return (
     <main>
