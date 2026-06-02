@@ -87,9 +87,9 @@ function Home() {
   }, []);
 
   // Parallax transforms — image drifts down slowly, content rises faster than scroll
-  const imageOffset = scrollY * 0.4;
-  const contentOffset = Math.max(0, 140 - scrollY * 0.5);
-  const contentOpacity = Math.max(0, 1 - scrollY / 600);
+  const imageOffset = scrollY * 0.2;
+  const contentOffset = Math.max(0, 280 - scrollY * 0.6);
+  const contentOpacity = Math.max(0, 1 - scrollY / 800);
 
   return (
     <main>
@@ -101,7 +101,7 @@ function Home() {
       </div>
 
       {/* Hero */}
-      <header className="relative w-full min-h-[640px] md:min-h-[760px] overflow-hidden flex flex-col justify-end pt-24 md:pt-40">
+      <header className="relative w-full min-h-[720px] md:min-h-[900px] overflow-hidden flex flex-col justify-end pt-24 md:pt-40">
         <div
           className="absolute inset-0 -z-10 will-change-transform"
           style={{ transform: `translate3d(0, ${imageOffset}px, 0)` }}
@@ -111,7 +111,7 @@ function Home() {
             alt="Misty hemlock forest at dawn in the British Columbia mountains"
             width={1920}
             height={1080}
-            className="w-full h-[120%] object-cover"
+            className="w-full h-[135%] object-cover"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10 -z-10" />
