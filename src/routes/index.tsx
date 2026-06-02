@@ -87,9 +87,9 @@ function Home() {
   }, []);
 
   // Parallax transforms — image drifts down slowly, content rises faster than scroll
-  const imageOffset = scrollY * 0.2;
-  const contentOffset = Math.max(0, 280 - scrollY * 0.6);
-  const contentOpacity = Math.max(0, 1 - scrollY / 800);
+  const imageOffset = scrollY * 0.15;
+  const contentOffset = Math.max(0, 480 - scrollY * 1.0);
+  const contentOpacity = Math.max(0, 1 - scrollY / 900);
 
   return (
     <main>
@@ -101,7 +101,7 @@ function Home() {
       </div>
 
       {/* Hero */}
-      <header className="relative w-full min-h-[720px] md:min-h-[900px] overflow-hidden flex flex-col justify-end pt-24 md:pt-40">
+      <header className="relative w-full min-h-[860px] md:min-h-[1100px] overflow-hidden flex flex-col justify-end pt-24 md:pt-40">
         <div
           className="absolute inset-0 -z-10 will-change-transform"
           style={{ transform: `translate3d(0, ${imageOffset}px, 0)` }}
