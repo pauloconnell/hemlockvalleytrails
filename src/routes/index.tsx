@@ -67,6 +67,9 @@ const projects = [
 
 function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const [vh, setVh] = useState(
+    typeof window !== "undefined" ? window.innerHeight : 800
+  );
 
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -86,9 +89,17 @@ function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Parallax transforms — image drifts down slowly, content rises faster than scroll
+  // Track viewport height
+  useEffect(() => {
+    const onResize = () => setVh(window.innerHeight);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  // Parallax — image drifts slowly, content starts 80% down the viewport and rises fast
   const imageOffset = scrollY * 0.1;
-  const contentOffset = scrollY * 1.8;
+  const startOffset = vh * 0.8;
+  const contentOffset = Math.max(0, startOffset - scrollY * 1.4);
   const contentOpacity = Math.max(0, 1 - scrollY / 250);
 
   return (
