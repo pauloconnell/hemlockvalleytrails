@@ -100,7 +100,7 @@ function Home() {
   const imageOffset = scrollY * 0.1;
   const startOffset = vh * 0.8;
   const contentOffset = Math.max(0, startOffset - scrollY * 1.4);
-  const contentOpacity = Math.max(0, 1 - scrollY / 250);
+  const contentOpacity = Math.max(0, 1 - scrollY / (vh * 0.8));
 
   return (
     <main>
