@@ -13,6 +13,7 @@ import { Route as VolunteersRouteImport } from './routes/volunteers'
 import { Route as SponsorsRouteImport } from './routes/sponsors'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MembershipRouteImport } from './routes/membership'
+import { Route as MapRouteImport } from './routes/map'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as BrochureRouteImport } from './routes/brochure'
 import { Route as IndexRouteImport } from './routes/index'
@@ -37,6 +38,11 @@ const MembershipRoute = MembershipRouteImport.update({
   path: '/membership',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MapRoute = MapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EventsRoute = EventsRouteImport.update({
   id: '/events',
   path: '/events',
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
+  '/map': typeof MapRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
+  '/map': typeof MapRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
+  '/map': typeof MapRoute
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/brochure'
     | '/events'
+    | '/map'
     | '/membership'
     | '/projects'
     | '/sponsors'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/brochure'
     | '/events'
+    | '/map'
     | '/membership'
     | '/projects'
     | '/sponsors'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/brochure'
     | '/events'
+    | '/map'
     | '/membership'
     | '/projects'
     | '/sponsors'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BrochureRoute: typeof BrochureRoute
   EventsRoute: typeof EventsRoute
+  MapRoute: typeof MapRoute
   MembershipRoute: typeof MembershipRoute
   ProjectsRoute: typeof ProjectsRoute
   SponsorsRoute: typeof SponsorsRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MembershipRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/map': {
+      id: '/map'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/events': {
       id: '/events'
       path: '/events'
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BrochureRoute: BrochureRoute,
   EventsRoute: EventsRoute,
+  MapRoute: MapRoute,
   MembershipRoute: MembershipRoute,
   ProjectsRoute: ProjectsRoute,
   SponsorsRoute: SponsorsRoute,

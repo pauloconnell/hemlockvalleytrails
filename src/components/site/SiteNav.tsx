@@ -6,6 +6,7 @@ import logo from "@/assets/hemlock-logo.jpg";
 const links = [
   { to: "/", label: "Home" },
   { to: "/projects", label: "Projects" },
+  { to: "/map", label: "Map" },
   { to: "/events", label: "Events" },
   { to: "/volunteers", label: "Volunteer" },
   { to: "/sponsors", label: "Sponsors" },
