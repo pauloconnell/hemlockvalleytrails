@@ -98,9 +98,11 @@ function Home() {
 
   // Parallax — image drifts slowly, content starts 80% down the viewport and rises fast
   const imageOffset = scrollY * 0.1;
-  const startOffset = vh * 0.8;
+  const startOffset = vh * 0.7;
   const contentOffset = Math.max(0, startOffset - scrollY * 1.4);
-  const contentOpacity = Math.max(0, 1 - scrollY / (vh * 0.8));
+  const fadeStart = vh * 0.8;
+  const fadeDistance = vh * 0.8;
+  const contentOpacity = Math.max(0, 1 - Math.max(0, scrollY - fadeStart) / fadeDistance);
 
   return (
     <main>
