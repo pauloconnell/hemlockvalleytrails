@@ -49,7 +49,7 @@ function MapPage() {
           </a>
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap gap-4">
           <a
             href={mapAsset.url}
             target="_blank"
@@ -57,6 +57,14 @@ function MapPage() {
             className="inline-block bg-foreground text-background px-5 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-primary transition-colors"
           >
             Open Full-Size Map
+          </a>
+          <a
+            href="https://www.trailforks.com/region/sasquatch-mountain-resort-47246/map/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block border border-border px-5 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-muted transition-colors"
+          >
+            View on Trailforks
           </a>
         </div>
       </section>
