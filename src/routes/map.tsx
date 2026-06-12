@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import mapAsset from "@/assets/hemlock-village-map.jpg.asset.json";
+import { SectionLabel } from "@/components/site/SectionLabel";
 
 export const Route = createFileRoute("/map")({
   head: () => ({
@@ -25,20 +26,22 @@ export const Route = createFileRoute("/map")({
 
 function MapPage() {
   return (
-    <main className="bg-background">
-      <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
-        <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-muted-foreground mb-4">
-          Trail Map
+    <main>
+      <header className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-16 md:pt-28 md:pb-20">
+          <SectionLabel>Trail Map</SectionLabel>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] max-w-3xl">
+            Hemlock Village Map
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-foreground/75 leading-relaxed">
+            Explore the full network of trails, viewpoints, and access points
+            across Hemlock Mountain. Tap or click the map to view full size.
+          </p>
         </div>
-        <h1 className="font-extrabold tracking-tighter text-4xl md:text-6xl uppercase leading-none">
-          Hemlock Village Map
-        </h1>
-        <p className="mt-6 max-w-2xl text-muted-foreground leading-relaxed">
-          Explore the full network of trails, viewpoints, and access points
-          across Hemlock Mountain. Tap or click the map to view full size.
-        </p>
+      </header>
 
-        <div className="mt-12 border border-border bg-card">
+      <section className="mx-auto max-w-7xl px-6 md:px-16 py-16 md:py-24">
+        <div className="border border-border bg-card">
           <a href={mapAsset.url} target="_blank" rel="noreferrer">
             <img
               src={mapAsset.url}
