@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import mapAsset from "@/assets/hemlock-village-map.jpg.asset.json";
+import { SectionLabel } from "@/components/site/SectionLabel";
 
 export const Route = createFileRoute("/map")({
   head: () => ({
