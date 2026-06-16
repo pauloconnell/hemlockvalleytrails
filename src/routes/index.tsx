@@ -98,7 +98,7 @@ function Home() {
 
   // Parallax — image drifts slowly, content starts 80% down the viewport and rises fast
   const imageOffset = scrollY * 0.1;
-  const startOffset = vh * 0.55;
+  const startOffset = vh * 0.5;
   const contentOffset = Math.max(0, startOffset - scrollY * 1.4);
   const fadeStart = vh * 0.8;
   const fadeDistance = vh * 0.8;
@@ -136,7 +136,11 @@ function Home() {
             willChange: "transform, opacity",
           }}
         >
-          <div className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl animate-reveal">
+          <div
+            className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-balance mb-8 text-foreground">
               Built by hands.<br />Fueled by community.
             </h1>
