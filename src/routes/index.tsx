@@ -148,8 +148,8 @@ function Home() {
               Hemlock Valley Trail Society was formed with a clear intention: to make the vast
               beauty of Hemlock Mountain and the surrounding community accessible to everyone.
             </p>
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 items-center">
-              <div className="flex flex-col sm:flex-col md:flex-row md:flex-wrap gap-3">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+              <div className="flex flex-col md:flex-row md:flex-wrap gap-3">
                 <Link
                   to="/membership"
                   className="bg-primary text-primary-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary-deep transition-colors text-center"
@@ -163,7 +163,7 @@ function Home() {
                   Explore Projects
                 </Link>
               </div>
-              <div className="p-2 sm:p-4">
+              <div className="flex items-center justify-center">
                 <img
                   src={logo}
                   alt="Hemlock Valley Trail Society logo"
