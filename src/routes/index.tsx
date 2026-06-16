@@ -136,7 +136,11 @@ function Home() {
             willChange: "transform, opacity",
           }}
         >
-          <div className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl animate-reveal">
+          <div
+            className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-balance mb-8 text-foreground">
               Built by hands.<br />Fueled by community.
             </h1>
