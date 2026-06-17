@@ -29,6 +29,10 @@ export const Route = createFileRoute("/map")({
 function MapPage() {
   return (
     <main>
+      <section className="mx-auto max-w-7xl px-6 md:px-16 pt-16 md:pt-20 overflow-x-auto">
+        <TrailforksMapWidget />
+      </section>
+
       <header className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-16 md:pt-28 md:pb-20">
           <SectionLabel>Trail Map</SectionLabel>
