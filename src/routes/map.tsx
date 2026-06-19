@@ -29,10 +29,6 @@ export const Route = createFileRoute("/map")({
 function MapPage() {
   return (
     <main>
-      <section className="mx-auto max-w-7xl px-6 md:px-16 pt-16 md:pt-20 overflow-x-auto">
-        <TrailforksMapWidget />
-      </section>
-
       <header className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-16 md:pt-28 md:pb-20">
           <SectionLabel>Trail Map</SectionLabel>
@@ -45,6 +41,15 @@ function MapPage() {
           </p>
         </div>
       </header>
+
+      <section className="mx-auto max-w-7xl px-6 md:px-16 pt-16 md:pt-20">
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6">
+          Hemlock Valley Trails on Trail Forks
+        </h2>
+        <div className="overflow-x-auto">
+          <TrailforksMapWidget />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-6 md:px-16 py-16 md:py-24">
         <div className="border border-border bg-card">
