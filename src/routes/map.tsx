@@ -32,23 +32,26 @@ function MapPage() {
       <header className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-16 md:pt-28 md:pb-20">
           <SectionLabel>Trail Map</SectionLabel>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] max-w-3xl">
-            Hemlock Village Map
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-foreground/75 leading-relaxed">
-            Explore the full network of trails, viewpoints, and access points
-            across Hemlock Mountain. Tap or click the map to view full size.
-          </p>
         </div>
       </header>
 
       <section className="mx-auto max-w-7xl px-6 md:px-16 pt-16 md:pt-20">
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6">
+        <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6">
           Hemlock Valley Trails on Trail Forks
         </h2>
         <div className="overflow-x-auto">
           <TrailforksMapWidget />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 md:px-16 pt-16 md:pt-20">
+        <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] max-w-3xl">
+          Hemlock Village Map
+        </h2>
+        <p className="mt-6 max-w-2xl text-lg text-foreground/75 leading-relaxed">
+          Explore the full network of trails, viewpoints, and access points
+          across Hemlock Mountain. Tap or click the map to view full size.
+        </p>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 md:px-16 py-16 md:py-24">
