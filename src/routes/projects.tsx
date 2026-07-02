@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import trailConstruction from "../assets/trail-construction.jpg";
 import trailMaintenance from "../assets/trail-maintenance.jpg";
 import community from "../assets/community.jpg";
-import { SectionLabel } from "../components/site/SectionLabel";
 
 export const Route = createFileRoute("/projects")({
   component: Projects,
@@ -82,13 +81,21 @@ const sections = [
 function Projects() {
   return (
     <main>
-      <header className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-16 md:pt-28 md:pb-20">
-          <SectionLabel>Projects</SectionLabel>
+      <header className="relative border-b border-border bg-foreground text-background overflow-hidden">
+        <img
+          src={trailConstruction}
+          alt="Trail construction on Hemlock Mountain"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-foreground/20" />
+        <div className="relative mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-20 md:pt-28 md:pb-28">
+          <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-4">
+            Projects
+          </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] max-w-3xl">
             What we're building on the mountain.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-foreground/75 leading-relaxed">
+          <p className="mt-6 max-w-2xl text-lg text-background/80 leading-relaxed">
             From sustainable construction to season-long maintenance and the people who make it
             possible — these are the programs that keep Hemlock's trails alive.
           </p>
