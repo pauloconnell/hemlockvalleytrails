@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import mapAsset from "@/assets/hemlock-village-map.jpg.asset.json";
-import { SectionLabel } from "@/components/site/SectionLabel";
 import { TrailforksMapWidget } from "@/components/site/TrailforksMapWidget";
+import mountainVista from "@/assets/gallery/mountain-vista.jpeg";
 
 
 export const Route = createFileRoute("/map")({
@@ -29,9 +29,24 @@ export const Route = createFileRoute("/map")({
 function MapPage() {
   return (
     <main>
-      <header className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-16 md:pt-28 md:pb-20">
-          <SectionLabel>Trail Map</SectionLabel>
+      <header className="relative border-b border-border bg-foreground text-background overflow-hidden">
+        <img
+          src={mountainVista}
+          alt="Hemlock Mountain vista"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-foreground/20" />
+        <div className="relative mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-20 md:pt-28 md:pb-28">
+          <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-4">
+            Trail Map
+          </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] max-w-3xl">
+            Know the mountain before you ride.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-background/80 leading-relaxed">
+            Explore the full network of trails, viewpoints, and access points
+            across Hemlock Mountain — on Trailforks and our printable village map.
+          </p>
         </div>
       </header>
 
