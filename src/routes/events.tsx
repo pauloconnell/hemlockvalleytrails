@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionLabel } from "../components/site/SectionLabel";
+import eventsHero from "../assets/gallery/utvs-trail.jpeg";
 
 export const Route = createFileRoute("/events")({
   component: Events,
