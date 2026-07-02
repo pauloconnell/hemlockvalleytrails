@@ -38,56 +38,28 @@ const updates = [
 const days = ["S", "M", "T", "W", "T", "F", "S"];
 
 function Events() {
-  // Render a static placeholder calendar grid (matches original "no upcoming events" state)
-  const cells = Array.from({ length: 42 }, (_, i) => i - 4); // numbers loosely
-
   return (
     <main>
-      <header className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-16 md:pt-28 md:pb-20">
-          <SectionLabel>Upcoming Events</SectionLabel>
+      <header className="relative border-b border-border bg-foreground text-background overflow-hidden">
+        <img
+          src={eventsHero}
+          alt="UTVs on a Hemlock Mountain trail"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-foreground/20" />
+        <div className="relative mx-auto max-w-7xl px-6 md:px-16 pt-20 pb-20 md:pt-28 md:pb-28">
+          <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-4">
+            Events &amp; Updates
+          </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] max-w-3xl">
-            Calendar of Events
+            Meet, ride, and celebrate the season.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-foreground/75 leading-relaxed">
-            42 events found across the season. Members receive direct notifications for monthly
-            meetings, work parties and community rides.
+          <p className="mt-6 max-w-2xl text-lg text-background/80 leading-relaxed">
+            Join us for monthly meetings, work parties, community rides, and seasonal gatherings
+            on Hemlock Mountain.
           </p>
         </div>
       </header>
-
-      {/* Calendar */}
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-16 py-16 md:py-20">
-          <div className="grid grid-cols-7 border-l border-t border-border bg-card">
-            {days.map((d, i) => (
-              <div
-                key={i}
-                className="border-r border-b border-border px-3 py-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/40"
-              >
-                {d}
-              </div>
-            ))}
-            {cells.map((n, i) => {
-              const day = ((n + 31) % 31) + 1;
-              return (
-                <div
-                  key={i}
-                  className="border-r border-b border-border aspect-square p-3 flex flex-col justify-between hover:bg-muted/40 transition-colors"
-                >
-                  <span className="font-mono text-[10px] text-muted-foreground">0 events</span>
-                  <span className="text-2xl font-extrabold tracking-tighter self-end text-foreground/60">
-                    {day}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-          <p className="mt-6 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
-            Notice — There are no upcoming events on the days shown.
-          </p>
-        </div>
-      </section>
 
       {/* Updates */}
       <section className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28">
