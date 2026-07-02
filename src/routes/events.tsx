@@ -35,8 +35,6 @@ const updates = [
   },
 ];
 
-const days = ["S", "M", "T", "W", "T", "F", "S"];
-
 function Events() {
   return (
     <main>
