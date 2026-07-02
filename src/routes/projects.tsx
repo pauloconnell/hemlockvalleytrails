@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import trailConstruction from "../assets/trail-construction.jpg";
 import trailMaintenance from "../assets/trail-maintenance.jpg";
 import community from "../assets/community.jpg";
-import community from "../assets/community.jpg";
 
 export const Route = createFileRoute("/projects")({
   component: Projects,
