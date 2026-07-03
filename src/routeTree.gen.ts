@@ -13,6 +13,9 @@ import { Route as VolunteersRouteImport } from './routes/volunteers'
 import { Route as SponsorsRouteImport } from './routes/sponsors'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MembershipRouteImport } from './routes/membership'
+import { Route as Map3RouteImport } from './routes/map3'
+import { Route as Map2RouteImport } from './routes/map2'
+import { Route as Map1RouteImport } from './routes/map1'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as BrochureRouteImport } from './routes/brochure'
@@ -36,6 +39,21 @@ const ProjectsRoute = ProjectsRouteImport.update({
 const MembershipRoute = MembershipRouteImport.update({
   id: '/membership',
   path: '/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Map3Route = Map3RouteImport.update({
+  id: '/map3',
+  path: '/map3',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Map2Route = Map2RouteImport.update({
+  id: '/map2',
+  path: '/map2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Map1Route = Map1RouteImport.update({
+  id: '/map1',
+  path: '/map1',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MapRoute = MapRouteImport.update({
@@ -64,6 +82,9 @@ export interface FileRoutesByFullPath {
   '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
   '/map': typeof MapRoute
+  '/map1': typeof Map1Route
+  '/map2': typeof Map2Route
+  '/map3': typeof Map3Route
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
@@ -74,6 +95,9 @@ export interface FileRoutesByTo {
   '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
   '/map': typeof MapRoute
+  '/map1': typeof Map1Route
+  '/map2': typeof Map2Route
+  '/map3': typeof Map3Route
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
@@ -85,6 +109,9 @@ export interface FileRoutesById {
   '/brochure': typeof BrochureRoute
   '/events': typeof EventsRoute
   '/map': typeof MapRoute
+  '/map1': typeof Map1Route
+  '/map2': typeof Map2Route
+  '/map3': typeof Map3Route
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
@@ -97,6 +124,9 @@ export interface FileRouteTypes {
     | '/brochure'
     | '/events'
     | '/map'
+    | '/map1'
+    | '/map2'
+    | '/map3'
     | '/membership'
     | '/projects'
     | '/sponsors'
@@ -107,6 +137,9 @@ export interface FileRouteTypes {
     | '/brochure'
     | '/events'
     | '/map'
+    | '/map1'
+    | '/map2'
+    | '/map3'
     | '/membership'
     | '/projects'
     | '/sponsors'
@@ -117,6 +150,9 @@ export interface FileRouteTypes {
     | '/brochure'
     | '/events'
     | '/map'
+    | '/map1'
+    | '/map2'
+    | '/map3'
     | '/membership'
     | '/projects'
     | '/sponsors'
@@ -128,6 +164,9 @@ export interface RootRouteChildren {
   BrochureRoute: typeof BrochureRoute
   EventsRoute: typeof EventsRoute
   MapRoute: typeof MapRoute
+  Map1Route: typeof Map1Route
+  Map2Route: typeof Map2Route
+  Map3Route: typeof Map3Route
   MembershipRoute: typeof MembershipRoute
   ProjectsRoute: typeof ProjectsRoute
   SponsorsRoute: typeof SponsorsRoute
@@ -162,6 +201,27 @@ declare module '@tanstack/react-router' {
       path: '/membership'
       fullPath: '/membership'
       preLoaderRoute: typeof MembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map3': {
+      id: '/map3'
+      path: '/map3'
+      fullPath: '/map3'
+      preLoaderRoute: typeof Map3RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map2': {
+      id: '/map2'
+      path: '/map2'
+      fullPath: '/map2'
+      preLoaderRoute: typeof Map2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map1': {
+      id: '/map1'
+      path: '/map1'
+      fullPath: '/map1'
+      preLoaderRoute: typeof Map1RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/map': {
@@ -200,6 +260,9 @@ const rootRouteChildren: RootRouteChildren = {
   BrochureRoute: BrochureRoute,
   EventsRoute: EventsRoute,
   MapRoute: MapRoute,
+  Map1Route: Map1Route,
+  Map2Route: Map2Route,
+  Map3Route: Map3Route,
   MembershipRoute: MembershipRoute,
   ProjectsRoute: ProjectsRoute,
   SponsorsRoute: SponsorsRoute,
