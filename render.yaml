@@ -5,4 +5,5 @@ services:
     buildCommand: "npm install && npm run build"
     startCommand: "node .output/server/index.mjs"
     envVars:
-      NODE_VERSION: 20
+      - key: NODE_VERSION
+        value: "20"
