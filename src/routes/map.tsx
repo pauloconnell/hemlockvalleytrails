@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import mapAsset from "@/assets/hemlock-village-map.jpg.asset.json";
+import villageMap from "@/assets/hemlock-village-map.jpg";
 import { TrailforksMapWidget } from "@/components/site/TrailforksMapWidget";
 import mountainVista from "@/assets/gallery/mountain-vista.jpeg";
 
@@ -19,8 +19,8 @@ export const Route = createFileRoute("/map")({
         content:
           "Hemlock Village trail map showing routes, viewpoints, and access points across Hemlock Mountain.",
       },
-      { property: "og:image", content: mapAsset.url },
-      { name: "twitter:image", content: mapAsset.url },
+      { property: "og:image", content: villageMap },
+      { name: "twitter:image", content: villageMap },
     ],
   }),
   component: MapPage,
@@ -71,9 +71,9 @@ function MapPage() {
 
       <section className="mx-auto max-w-7xl px-6 md:px-16 py-16 md:py-24">
         <div className="border border-border bg-card">
-          <a href={mapAsset.url} target="_blank" rel="noreferrer">
+          <a href={villageMap} target="_blank" rel="noreferrer">
             <img
-              src={mapAsset.url}
+              src={villageMap}
               alt="Hemlock Village trail map"
               className="w-full h-auto block"
               loading="eager"
