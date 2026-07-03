@@ -3,6 +3,9 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+   "nitro": {
+    "preset": "cloudflare-pages"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
