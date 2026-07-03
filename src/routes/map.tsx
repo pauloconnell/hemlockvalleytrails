@@ -83,7 +83,7 @@ function MapPage() {
 
         <div className="mt-6 flex flex-wrap gap-4">
           <a
-            href={mapAsset.url}
+            href={villageMap}
             target="_blank"
             rel="noreferrer"
             className="inline-block bg-foreground text-background px-5 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-primary transition-colors"
