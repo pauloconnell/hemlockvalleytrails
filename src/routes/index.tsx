@@ -165,11 +165,11 @@ function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="md:col-span-5 order-1 md:order-2 flex justify-center">
+              <div className="md:col-span-5 order-1 md:order-2">
                 <img
                   src={logo}
                   alt="Hemlock Valley Trail Society logo"
-                  className="w-[70vw] max-w-[520px] md:w-full md:max-w-none h-auto aspect-square rounded-full object-cover ring-2 ring-background/40 shadow-2xl"
+                  className="w-[70vw] max-w-[520px] md:w-full md:max-w-none h-auto aspect-square rounded-full object-cover ring-2 ring-background/40 shadow-2xl mx-auto"
                 />
               </div>
             </div>
