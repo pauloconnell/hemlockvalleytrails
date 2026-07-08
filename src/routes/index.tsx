@@ -137,37 +137,39 @@ function Home() {
           }}
         >
           <div
-            className="px-6 md:px-16 pb-16 md:pb-24 max-w-5xl"
+            className="px-6 md:px-16 pb-16 md:pb-24 max-w-7xl"
             data-aos="fade-up"
             data-aos-duration="1200"
           >
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-balance mb-8 text-foreground">
-              Built by hands.<br />Fueled by community.
-            </h1>
-            <p className="text-base md:text-xl max-w-2xl text-pretty leading-relaxed text-foreground/85">
-              Hemlock Valley Trail Society was formed with a clear intention: to make the vast
-              beauty of Hemlock Mountain and the surrounding community accessible to everyone.
-            </p>
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 items-center">
-              <div className="flex flex-col sm:flex-col md:flex-row md:flex-wrap gap-3">
-                <Link
-                  to="/membership"
-                  className="bg-primary text-primary-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary-deep transition-colors text-center"
-                >
-                  Become a Member
-                </Link>
-                <Link
-                  to="/projects"
-                  className="border border-foreground/30 text-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:border-foreground hover:bg-foreground hover:text-background transition-colors text-center"
-                >
-                  Explore Projects
-                </Link>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+              <div className="md:col-span-8 order-2 md:order-1">
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9] text-balance mb-8 text-foreground">
+                  Built by hands.<br />Fueled by community.
+                </h1>
+                <p className="text-base md:text-xl max-w-2xl text-pretty leading-relaxed text-foreground/85">
+                  Hemlock Valley Trail Society was formed with a clear intention: to make the vast
+                  beauty of Hemlock Mountain and the surrounding community accessible to everyone.
+                </p>
+                <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-3">
+                  <Link
+                    to="/membership"
+                    className="bg-primary text-primary-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary-deep transition-colors text-center"
+                  >
+                    Become a Member
+                  </Link>
+                  <Link
+                    to="/projects"
+                    className="border border-foreground/30 text-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:border-foreground hover:bg-foreground hover:text-background transition-colors text-center"
+                  >
+                    Explore Projects
+                  </Link>
+                </div>
               </div>
-              <div className="p-2 sm:p-4">
+              <div className="md:col-span-4 order-1 md:order-2 p-2 sm:p-4">
                 <img
                   src={logo}
                   alt="Hemlock Valley Trail Society logo"
-                  className="w-full h-auto aspect-square rounded-full object-cover ring-2 ring-background/40 shadow-2xl"
+                  className="w-full h-auto aspect-square rounded-full object-cover ring-2 ring-background/40 shadow-2xl max-w-xs mx-auto md:max-w-none"
                 />
               </div>
             </div>
