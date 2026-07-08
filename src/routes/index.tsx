@@ -137,7 +137,7 @@ function Home() {
           }}
         >
           <div
-            className="px-6 md:px-16 pb-16 md:pb-24 max-w-7xl"
+            className="px-6 md:px-16 pb-16 md:pb-24"
             data-aos="fade-up"
             data-aos-duration="1200"
           >
