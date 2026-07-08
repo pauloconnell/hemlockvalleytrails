@@ -141,8 +141,8 @@ function Home() {
             data-aos="fade-up"
             data-aos-duration="1200"
           >
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
-              <div className="md:col-span-8 order-2 md:order-1">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center">
+              <div className="md:col-span-7 order-2 md:order-1">
                 <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9] text-balance mb-8 text-foreground">
                   Built by hands.<br />Fueled by community.
                 </h1>
@@ -165,11 +165,11 @@ function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="md:col-span-4 order-1 md:order-2 p-2 sm:p-4">
+              <div className="md:col-span-5 order-1 md:order-2">
                 <img
                   src={logo}
                   alt="Hemlock Valley Trail Society logo"
-                  className="w-full h-auto aspect-square rounded-full object-cover ring-2 ring-background/40 shadow-2xl max-w-xs mx-auto md:max-w-none"
+                  className="w-[70vw] max-w-[520px] md:w-full md:max-w-none h-auto aspect-square rounded-full object-cover ring-2 ring-background/40 shadow-2xl mx-auto"
                 />
               </div>
             </div>
