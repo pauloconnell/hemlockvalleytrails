@@ -96,9 +96,9 @@ function Home() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // Parallax — image drifts slowly, content starts near the bottom and rises fast
+  // Parallax — image drifts slowly, content starts 80% down the viewport and rises fast
   const imageOffset = scrollY * 0.1;
-  const startOffset = vh * 0.05;
+  const startOffset = vh * 0.1;
   const contentOffset = Math.max(0, startOffset - scrollY * 1.4);
   const fadeStart = vh * 0.8;
   const fadeDistance = vh * 0.8;
