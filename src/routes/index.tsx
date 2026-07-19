@@ -114,7 +114,7 @@ function Home() {
       </div>
 
       {/* Hero */}
-      <header className="relative w-full min-h-[860px] overflow-hidden flex flex-col justify-end pt-24 md:pt-28">
+      <header className="relative w-full min-h-[860px] overflow-hidden flex flex-col justify-end pt-24 md:pt-10">
         <div
           className="absolute inset-0 -z-10 will-change-transform"
           style={{ transform: `translate3d(0, ${imageOffset}px, 0)` }}
