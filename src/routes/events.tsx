@@ -18,14 +18,14 @@ export const Route = createFileRoute("/events")({
 const updates = [
   {
     category: "Holidays",
-    title: "Canada Day",
-    body: "July 1st 2025",
+    title: "Labour Day",
+    body: "September 5th",
   },
   {
     category: "HVTS Meeting",
-    title: "HVTS July Monthly Meeting",
+    title: "HVTS Monthly Meeting",
     body:
-      "Every month we invite members and volunteers to join us to discuss the current and upcoming trail projects on the mountain. Grizzly Den — 20753 Mount Keenan Road, Saturday July 5th 11:30am.",
+      "Every month we invite members and volunteers to join us to discuss the current and upcoming trail projects on the mountain. Grizzly Den — 20753 Mount Keenan Road, Date: TBD.",
   },
   {
     category: "HVTS Event",
