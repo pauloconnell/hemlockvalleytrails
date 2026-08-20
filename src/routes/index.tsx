@@ -363,9 +363,9 @@ function Home() {
               Holidays
             </div>
             <h3 className="text-2xl font-extrabold tracking-tight mb-3 group-hover:text-primary transition-colors">
-              Labour Day
+              Canada Day
             </h3>
-            <p className="text-sm text-muted-foreground">TBD</p>
+            <p className="text-sm text-muted-foreground">July 1st 2025</p>
           </article>
           <article
             className="border border-border p-8 hover:border-foreground transition-colors group"
@@ -376,9 +376,13 @@ function Home() {
               HVTS Meeting
             </div>
             <h3 className="text-2xl font-extrabold tracking-tight mb-3 group-hover:text-primary transition-colors">
-              HVTS Monthly Meeting
+              HVTS July Monthly Meeting
             </h3>
-            <p className="text-sm text-muted-foreground">TBD</p>
+            <p className="text-sm text-muted-foreground">
+              Every month we invite members and volunteers to join us to discuss the current and
+              upcoming trail projects on the mountain. Grizzly Den — 20753 Mount Keenan Road,
+              Saturday July 5th 11:30am.
+            </p>
           </article>
           <article
             className="border border-border p-8 hover:border-foreground transition-colors group"
