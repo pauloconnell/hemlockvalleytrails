@@ -193,10 +193,8 @@ function Home() {
             data-aos-delay="100"
           >
             <p>
-              was formed with a clear intention: to make the vast beauty of Hemlock Mountain and
-              the surrounding community accessible to everyone. The goal is to create and maintain
-              outdoor spaces, create and foster a sense of community and make changes that can be
-              enjoyed for many years to come.
+              The goal is to create and maintain outdoor spaces, create and foster a sense of
+              community and make changes that can be enjoyed for many years to come.
             </p>
             <p>
               Through memberships, volunteer work, sponsorships and community support, we are
