@@ -29,9 +29,9 @@ const updates = [
   },
   {
     category: "HVTS Event",
-    title: "St. Patrick's Day Ride and BBQ",
+    title: "Ride and BBQ",
     body:
-      "A community ride followed by a trailside BBQ to celebrate the season together.",
+      "A community ride followed by a trailside BBQ to celebrate the season together. Date: TBD",
   },
 ];
 

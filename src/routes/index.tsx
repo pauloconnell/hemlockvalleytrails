@@ -393,10 +393,10 @@ function Home() {
               HVTS Event
             </div>
             <h3 className="text-2xl font-extrabold tracking-tight mb-3 group-hover:text-primary transition-colors">
-              St. Patrick's Day Ride and BBQ
+              Ride and BBQ
             </h3>
             <p className="text-sm text-muted-foreground">
-              A community ride followed by a trailside BBQ to celebrate the season.
+              A community ride followed by a trailside BBQ to celebrate the season together. Date: TBD
             </p>
           </article>
         </div>
