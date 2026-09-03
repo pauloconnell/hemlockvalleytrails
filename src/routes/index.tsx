@@ -263,7 +263,12 @@ function Home() {
       {/* Stats / CTA */}
       <section className="border-t border-border bg-primary text-primary-foreground">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
-          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="0">
+          <Link
+            to="/membership"
+            className="block p-10 md:p-12 hover:bg-primary-foreground/5 transition-colors"
+            data-aos="zoom-in"
+            data-aos-delay="0"
+          >
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               01 / Memberships
             </div>
@@ -271,8 +276,13 @@ function Home() {
             <p className="text-sm text-primary-foreground/85">
               Memberships fund tools, materials and the work of building lasting trails.
             </p>
-          </div>
-          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="150">
+          </Link>
+          <Link
+            to="/volunteers"
+            className="block p-10 md:p-12 hover:bg-primary-foreground/5 transition-colors"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          >
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               02 / Volunteer
             </div>
@@ -280,8 +290,13 @@ function Home() {
             <p className="text-sm text-primary-foreground/85">
               Volunteers play a critical role in trail construction, maintenance, and cleanup.
             </p>
-          </div>
-          <div className="p-10 md:p-12" data-aos="zoom-in" data-aos-delay="300">
+          </Link>
+          <Link
+            to="/sponsors"
+            className="block p-10 md:p-12 hover:bg-primary-foreground/5 transition-colors"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
             <div className="font-mono text-[10px] uppercase tracking-widest text-primary-foreground/70 mb-5">
               03 / Sponsor
             </div>
@@ -289,7 +304,7 @@ function Home() {
             <p className="text-sm text-primary-foreground/85">
               Sponsorships and community support drive positive changes on Hemlock.
             </p>
-          </div>
+          </Link>
         </div>
       </section>
 
