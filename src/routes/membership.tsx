@@ -31,7 +31,7 @@ function Membership() {
             determined to create positive changes on Hemlock.
           </p>
           <a
-            href="mailto:admin@hemlockvalleytrails.ca?subject=Membership%20Inquiry"
+            href="mailto:hemlockvalleytrailsociety@gmail.com?subject=Membership%20Inquiry"
             className="inline-block mt-10 bg-background text-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             Email to Join
@@ -89,10 +89,10 @@ function Membership() {
             sponsorship conversation.
           </p>
           <a
-            href="mailto:admin@hemlockvalleytrails.ca"
+            href="mailto:hemlockvalleytrailsociety@gmail.com"
             className="inline-block bg-foreground text-background px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors"
           >
-            admin@hemlockvalleytrails.ca
+            hemlockvalleytrailsociety@gmail.com
           </a>
         </div>
       </section>
