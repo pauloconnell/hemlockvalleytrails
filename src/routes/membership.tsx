@@ -89,10 +89,10 @@ function Membership() {
             sponsorship conversation.
           </p>
           <a
-            href="mailto:admin@hemlockvalleytrails.ca"
+            href="mailto:hemlockvalleytrailsociety@gmail.com"
             className="inline-block bg-foreground text-background px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors"
           >
-            admin@hemlockvalleytrails.ca
+            hemlockvalleytrailsociety@gmail.com
           </a>
         </div>
       </section>
