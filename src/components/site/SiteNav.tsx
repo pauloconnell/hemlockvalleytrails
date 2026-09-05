@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/hemlock-logo.jpg";
 
 const links = [
   { to: "/", label: "Home" },
@@ -22,13 +21,8 @@ export function SiteNav() {
         <Link
           to="/"
           onClick={() => setOpen(false)}
-          className="flex items-center gap-3"
+          className="flex items-center"
         >
-          <img
-            src={logo}
-            alt="Hemlock Valley Trail Society logo"
-            className="h-11 w-11 rounded-full object-cover ring-1 ring-border"
-          />
           <span className="font-extrabold tracking-tighter text-lg uppercase leading-none">
             Hemlock Valley
             <span className="block text-[10px] font-mono tracking-[0.2em] text-muted-foreground mt-0.5">
