@@ -11,6 +11,7 @@ import {
 } from "@tanstack/react-router";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Toaster } from "@/components/ui/sonner";
 
 import appCss from "../styles.css?url";
 import { SiteNav } from "../components/site/SiteNav";
@@ -151,6 +152,7 @@ function RootComponent() {
       <SiteNav />
       <Outlet />
       <SiteFooter />
+      <Toaster position="bottom-right" richColors />
     </QueryClientProvider>
   );
 }

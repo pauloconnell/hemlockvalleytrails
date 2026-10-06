@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { toast } from "sonner";
 import { SectionLabel } from "../components/site/SectionLabel";
 import store1Asset from "../assets/store1.jpg.asset.json";
 import store2Asset from "../assets/store2.jpg.asset.json";
@@ -49,7 +50,11 @@ function Store() {
       <section className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28">
         <SectionLabel index="01">First Look</SectionLabel>
         <div className="grid gap-6 md:grid-cols-3 md:gap-8">
-          <figure className="group border border-border bg-card overflow-hidden" data-aos="fade-up">
+          <figure
+            className="group border border-border bg-card overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            onClick={() => toast("Store coming soon")}
+          >
             <img
               src={store1Asset.url}
               alt="Hemlock Valley Trail Society jerseys"
@@ -63,7 +68,12 @@ function Store() {
               <div className="mt-1 font-bold tracking-tight">Custom team jerseys</div>
             </figcaption>
           </figure>
-          <figure className="group border border-border bg-card overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <figure
+            className="group border border-border bg-card overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            onClick={() => toast("Store coming soon")}
+          >
             <img
               src={store2Asset.url}
               alt="HVTS jersey back with name and number"
@@ -77,7 +87,12 @@ function Store() {
               <div className="mt-1 font-bold tracking-tight">Personalized name & number</div>
             </figcaption>
           </figure>
-          <figure className="group border border-border bg-card overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <figure
+            className="group border border-border bg-card overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            onClick={() => toast("Store coming soon")}
+          >
             <img
               src={store3Asset.url}
               alt="Insulated tumbler with the society logo"
