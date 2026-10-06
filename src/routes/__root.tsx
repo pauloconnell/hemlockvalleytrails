@@ -152,6 +152,7 @@ function RootComponent() {
       <SiteNav />
       <Outlet />
       <SiteFooter />
+      <Toaster position="bottom-right" richColors />
     </QueryClientProvider>
   );
 }
