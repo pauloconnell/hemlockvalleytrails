@@ -47,8 +47,53 @@ function Store() {
       </header>
 
       <section className="mx-auto max-w-7xl px-6 md:px-16 py-20 md:py-28">
-        <SectionLabel index="01">Coming Soon</SectionLabel>
-        <div className="border border-border bg-muted/40 p-10 md:p-16 text-center">
+        <SectionLabel index="01">First Look</SectionLabel>
+        <div className="grid gap-6 md:grid-cols-3 md:gap-8">
+          <figure className="group border border-border bg-card overflow-hidden" data-aos="fade-up">
+            <img
+              src={store1Asset.url}
+              alt="Hemlock Valley Trail Society jerseys"
+              className="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-500"
+              loading="lazy"
+            />
+            <figcaption className="p-5 border-t border-border">
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                HVTS Jersey
+              </div>
+              <div className="mt-1 font-bold tracking-tight">Custom team jerseys</div>
+            </figcaption>
+          </figure>
+          <figure className="group border border-border bg-card overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src={store2Asset.url}
+              alt="HVTS jersey back with name and number"
+              className="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-500"
+              loading="lazy"
+            />
+            <figcaption className="p-5 border-t border-border">
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                HVTS Jersey
+              </div>
+              <div className="mt-1 font-bold tracking-tight">Personalized name & number</div>
+            </figcaption>
+          </figure>
+          <figure className="group border border-border bg-card overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src={store3Asset.url}
+              alt="Insulated tumbler with the society logo"
+              className="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-500"
+              loading="lazy"
+            />
+            <figcaption className="p-5 border-t border-border">
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                HVTS Tumbler
+              </div>
+              <div className="mt-1 font-bold tracking-tight">Logo insulated tumbler</div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div className="mt-14 border border-border bg-muted/40 p-10 md:p-16 text-center">
           <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
             Under Construction
           </div>
@@ -56,9 +101,8 @@ function Store() {
             The store is on its way.
           </h2>
           <p className="mt-6 max-w-xl mx-auto text-foreground/70 leading-relaxed text-lg">
-            We're setting up shop for hats, shirts, stickers and more — all featuring the
-            society logo. Check back soon, or reach out if you'd like to be notified when
-            items go live.
+            Jerseys, tumblers and more featuring the society logo. Check back soon, or
+            reach out if you'd like to be notified when items go live.
           </p>
           <a
             href="mailto:hemlockvalleytrailsociety@gmail.com?subject=Store%20interest"
