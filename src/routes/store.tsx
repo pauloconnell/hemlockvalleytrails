@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SectionLabel } from "../components/site/SectionLabel";
+import store1Asset from "../assets/store1.jpg.asset.json";
+import store2Asset from "../assets/store2.jpg.asset.json";
+import store3Asset from "../assets/store3.jpg.asset.json";
 
 export const Route = createFileRoute("/store")({
   component: Store,
