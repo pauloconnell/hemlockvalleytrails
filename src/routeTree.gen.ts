@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VolunteersRouteImport } from './routes/volunteers'
+import { Route as StoreRouteImport } from './routes/store'
 import { Route as SponsorsRouteImport } from './routes/sponsors'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MembershipRouteImport } from './routes/membership'
@@ -24,6 +25,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const VolunteersRoute = VolunteersRouteImport.update({
   id: '/volunteers',
   path: '/volunteers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoreRoute = StoreRouteImport.update({
+  id: '/store',
+  path: '/store',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SponsorsRoute = SponsorsRouteImport.update({
@@ -88,6 +94,7 @@ export interface FileRoutesByFullPath {
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
+  '/store': typeof StoreRoute
   '/volunteers': typeof VolunteersRoute
 }
 export interface FileRoutesByTo {
@@ -101,6 +108,7 @@ export interface FileRoutesByTo {
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
+  '/store': typeof StoreRoute
   '/volunteers': typeof VolunteersRoute
 }
 export interface FileRoutesById {
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   '/membership': typeof MembershipRoute
   '/projects': typeof ProjectsRoute
   '/sponsors': typeof SponsorsRoute
+  '/store': typeof StoreRoute
   '/volunteers': typeof VolunteersRoute
 }
 export interface FileRouteTypes {
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/membership'
     | '/projects'
     | '/sponsors'
+    | '/store'
     | '/volunteers'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -143,6 +153,7 @@ export interface FileRouteTypes {
     | '/membership'
     | '/projects'
     | '/sponsors'
+    | '/store'
     | '/volunteers'
   id:
     | '__root__'
@@ -156,6 +167,7 @@ export interface FileRouteTypes {
     | '/membership'
     | '/projects'
     | '/sponsors'
+    | '/store'
     | '/volunteers'
   fileRoutesById: FileRoutesById
 }
@@ -170,6 +182,7 @@ export interface RootRouteChildren {
   MembershipRoute: typeof MembershipRoute
   ProjectsRoute: typeof ProjectsRoute
   SponsorsRoute: typeof SponsorsRoute
+  StoreRoute: typeof StoreRoute
   VolunteersRoute: typeof VolunteersRoute
 }
 
@@ -180,6 +193,13 @@ declare module '@tanstack/react-router' {
       path: '/volunteers'
       fullPath: '/volunteers'
       preLoaderRoute: typeof VolunteersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/store': {
+      id: '/store'
+      path: '/store'
+      fullPath: '/store'
+      preLoaderRoute: typeof StoreRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sponsors': {
@@ -266,6 +286,7 @@ const rootRouteChildren: RootRouteChildren = {
   MembershipRoute: MembershipRoute,
   ProjectsRoute: ProjectsRoute,
   SponsorsRoute: SponsorsRoute,
+  StoreRoute: StoreRoute,
   VolunteersRoute: VolunteersRoute,
 }
 export const routeTree = rootRouteImport
