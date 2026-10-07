@@ -9,67 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as BrochureRouteImport } from './routes/brochure'
-import { Route as EventsRouteImport } from './routes/events'
-import { Route as MapRouteImport } from './routes/map'
-import { Route as Map1RouteImport } from './routes/map1'
-import { Route as Map2RouteImport } from './routes/map2'
-import { Route as Map3RouteImport } from './routes/map3'
-import { Route as MembershipRouteImport } from './routes/membership'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as SponsorsRouteImport } from './routes/sponsors'
-import { Route as StoreRouteImport } from './routes/store'
 import { Route as VolunteersRouteImport } from './routes/volunteers'
+import { Route as StoreRouteImport } from './routes/store'
+import { Route as SponsorsRouteImport } from './routes/sponsors'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as MembershipRouteImport } from './routes/membership'
+import { Route as Map3RouteImport } from './routes/map3'
+import { Route as Map2RouteImport } from './routes/map2'
+import { Route as Map1RouteImport } from './routes/map1'
+import { Route as MapRouteImport } from './routes/map'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as BrochureRouteImport } from './routes/brochure'
+import { Route as IndexRouteImport } from './routes/index'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BrochureRoute = BrochureRouteImport.update({
-  id: '/brochure',
-  path: '/brochure',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventsRoute = EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MapRoute = MapRouteImport.update({
-  id: '/map',
-  path: '/map',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Map1Route = Map1RouteImport.update({
-  id: '/map1',
-  path: '/map1',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Map2Route = Map2RouteImport.update({
-  id: '/map2',
-  path: '/map2',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Map3Route = Map3RouteImport.update({
-  id: '/map3',
-  path: '/map3',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MembershipRoute = MembershipRouteImport.update({
-  id: '/membership',
-  path: '/membership',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SponsorsRoute = SponsorsRouteImport.update({
-  id: '/sponsors',
-  path: '/sponsors',
+const VolunteersRoute = VolunteersRouteImport.update({
+  id: '/volunteers',
+  path: '/volunteers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StoreRoute = StoreRouteImport.update({
@@ -77,9 +32,54 @@ const StoreRoute = StoreRouteImport.update({
   path: '/store',
   getParentRoute: () => rootRouteImport,
 } as any)
-const VolunteersRoute = VolunteersRouteImport.update({
-  id: '/volunteers',
-  path: '/volunteers',
+const SponsorsRoute = SponsorsRouteImport.update({
+  id: '/sponsors',
+  path: '/sponsors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembershipRoute = MembershipRouteImport.update({
+  id: '/membership',
+  path: '/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Map3Route = Map3RouteImport.update({
+  id: '/map3',
+  path: '/map3',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Map2Route = Map2RouteImport.update({
+  id: '/map2',
+  path: '/map2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Map1Route = Map1RouteImport.update({
+  id: '/map1',
+  path: '/map1',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapRoute = MapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrochureRoute = BrochureRouteImport.update({
+  id: '/brochure',
+  path: '/brochure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -188,74 +188,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/brochure': {
-      id: '/brochure'
-      path: '/brochure'
-      fullPath: '/brochure'
-      preLoaderRoute: typeof BrochureRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/events': {
-      id: '/events'
-      path: '/events'
-      fullPath: '/events'
-      preLoaderRoute: typeof EventsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/map': {
-      id: '/map'
-      path: '/map'
-      fullPath: '/map'
-      preLoaderRoute: typeof MapRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/map1': {
-      id: '/map1'
-      path: '/map1'
-      fullPath: '/map1'
-      preLoaderRoute: typeof Map1RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/map2': {
-      id: '/map2'
-      path: '/map2'
-      fullPath: '/map2'
-      preLoaderRoute: typeof Map2RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/map3': {
-      id: '/map3'
-      path: '/map3'
-      fullPath: '/map3'
-      preLoaderRoute: typeof Map3RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/membership': {
-      id: '/membership'
-      path: '/membership'
-      fullPath: '/membership'
-      preLoaderRoute: typeof MembershipRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sponsors': {
-      id: '/sponsors'
-      path: '/sponsors'
-      fullPath: '/sponsors'
-      preLoaderRoute: typeof SponsorsRouteImport
+    '/volunteers': {
+      id: '/volunteers'
+      path: '/volunteers'
+      fullPath: '/volunteers'
+      preLoaderRoute: typeof VolunteersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/store': {
@@ -265,11 +202,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StoreRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/volunteers': {
-      id: '/volunteers'
-      path: '/volunteers'
-      fullPath: '/volunteers'
-      preLoaderRoute: typeof VolunteersRouteImport
+    '/sponsors': {
+      id: '/sponsors'
+      path: '/sponsors'
+      fullPath: '/sponsors'
+      preLoaderRoute: typeof SponsorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/membership': {
+      id: '/membership'
+      path: '/membership'
+      fullPath: '/membership'
+      preLoaderRoute: typeof MembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map3': {
+      id: '/map3'
+      path: '/map3'
+      fullPath: '/map3'
+      preLoaderRoute: typeof Map3RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map2': {
+      id: '/map2'
+      path: '/map2'
+      fullPath: '/map2'
+      preLoaderRoute: typeof Map2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map1': {
+      id: '/map1'
+      path: '/map1'
+      fullPath: '/map1'
+      preLoaderRoute: typeof Map1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map': {
+      id: '/map'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brochure': {
+      id: '/brochure'
+      path: '/brochure'
+      fullPath: '/brochure'
+      preLoaderRoute: typeof BrochureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
