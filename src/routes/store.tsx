@@ -2,15 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { SectionLabel } from "../components/site/SectionLabel";
-import store1Asset from "../assets/store1.jpg.asset.json";
-import store2Asset from "../assets/store2.jpg.asset.json";
-import store3Asset from "../assets/store3.jpg.asset.json";
+import store1 from "../assets/store1.jpg";
+import store2 from "../assets/store2.jpg";
+import store3 from "../assets/store3.jpg";
 
 export const Route = createFileRoute("/store")({
   component: Store,
   head: () => ({
     meta: [
       { title: "Store — Hemlock Valley Trail Society" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       {
         name: "description",
         content:
@@ -56,7 +58,7 @@ function Store() {
             onClick={() => toast("Store coming soon")}
           >
             <img
-              src={store1Asset.url}
+              src={store1}
               alt="Hemlock Valley Trail Society jerseys"
               className="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-500"
               loading="lazy"
@@ -75,7 +77,7 @@ function Store() {
             onClick={() => toast("Store coming soon")}
           >
             <img
-              src={store2Asset.url}
+              src={store2}
               alt="HVTS jersey back with name and number"
               className="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-500"
               loading="lazy"
@@ -94,7 +96,7 @@ function Store() {
             onClick={() => toast("Store coming soon")}
           >
             <img
-              src={store3Asset.url}
+              src={store3}
               alt="Insulated tumbler with the society logo"
               className="w-full aspect-square object-cover group-hover:scale-[1.03] transition-transform duration-500"
               loading="lazy"
